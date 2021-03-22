@@ -4,6 +4,7 @@
 
 To build two regression models that can predict a player’s salary based on their on-field performance and their baseball statistics for a season.  Also, to build a user interactive web app with Streamlit where users can input custom baseball statistics to generate a salary prediction based on those statistics. One regression model will be used for position players only using hitting stats and the other model will be used for pitchers using pitching stats.
 
+Here is the link to my app: http://localhost:8501/
 
 ### Data:
 

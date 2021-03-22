@@ -2,7 +2,6 @@
 import pickle
 import streamlit as st
 import pandas as pd 
-import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(
@@ -143,7 +142,7 @@ Enter your stats to generate your salary prediction!
 
     ''')
     features_for_pitchers = user_input_feats_pitchers()
-    with open('pitchers.p', 'rb') as pickle_in:
+    with open('streamlit_models/pitchers.p', 'rb') as pickle_in:
         lr = pickle.load(pickle_in)   
         
     predicted_pitchers_salary = round(np.exp(lr.predict([features_for_pitchers]))[0], 2)
@@ -158,7 +157,7 @@ Enter your stats to generate your salary prediction!
 
     ''')
     features_for_position_players = user_input_feats_pos_players()
-    with open('position_players.p', 'rb') as pickle_in:
+    with open('streamlit_models/position_players.p', 'rb') as pickle_in:
         lr = pickle.load(pickle_in) 
 
     predicted_pos_players_salary = round(np.exp(lr.predict([features_for_position_players]))[0], 2)
